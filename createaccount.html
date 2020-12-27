@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Account</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+      .alert{
+        display: none;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -41,7 +46,7 @@
             <h1 class="text-center">Create Account</h1>
             <div class="row">
               <div class="col-md-12 pt-4">  
-                <form method="post" id="loginForm" name="loginForm">
+                <form oninput='cpassword.setCustomValidity(cpassword.value != password.value ? "Passwords do not match." : "")'>
                     <div class="form-group text-center">
                         <label class="form-label " for="login">Account for:</label>
                         <label class="radio-inline">
@@ -58,17 +63,20 @@
                         <input type="email" class="form-control" id="email" placeholder="Email" required="true">
                       </div>
                         <div class="form-group pt-2">
-                          <input type="password" class="form-control" name="password" id="password" placeholder="New password" required="true">
+                          <input type="password" class="form-control" name="password" placeholder="New password" required="true">
                         </div>
                         <div class="form-group pt-2">
-                          <input type="password" class="form-control" name="confirmpassword" id="confirmpassword" placeholder="Confirm password" required="true">
+                          <input type="password" class="form-control" name="cpassword" placeholder="Confirm password" required="true">
                         </div>
                     <div class="form-group pt-2">
                         <div>
                             <button type="submit" class="btn btn-primary w-100">Create Account</button>
+                            <div class="alert alert-success alert-dismissable">
+                              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Success! Account created successfully.
+                            </div> 
                         </div>
                         <div class="pt-4">
-                            <button type="submit" class="btn btn-white w-100">Cancel</button>
+                           <a href="index.html" type="submit" style="background: grey;" class="btn text-white w-100">Cancel</a>
                         </div>
                     </div>
                   </form>
@@ -88,6 +96,13 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/1c029a12c6.js" crossorigin="anonymous"></script>         
+    <script src="https://kit.fontawesome.com/1c029a12c6.js" crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function(){
+        $('button').click(function(){
+          $('.alert').show()
+        }) 
+      });
+    </script>         
 </body>
 </html>
