@@ -5,11 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Account</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <style>
-      .alert{
-        display: none;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -70,10 +65,7 @@
                         </div>
                     <div class="form-group pt-2">
                         <div>
-                            <button type="submit" class="btn btn-primary w-100">Create Account</button>
-                            <div class="alert alert-success alert-dismissable">
-                              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Success! Account created successfully.
-                            </div> 
+                            <button id="createaccount" type="submit" class="btn btn-primary w-100">Create Account</button>
                         </div>
                         <div class="pt-4">
                            <a href="index.html" type="submit" style="background: grey;" class="btn text-white w-100">Cancel</a>
@@ -99,8 +91,8 @@
     <script src="https://kit.fontawesome.com/1c029a12c6.js" crossorigin="anonymous"></script>
     <script>
       $(document).ready(function(){
-        $('button').click(function(){
-          $('.alert').show()
+        $('#createaccount').click(function(){
+          alert("Success! Account created successfully.");
         }) 
       });
     </script>         
