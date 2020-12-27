@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <title>Create Account</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
@@ -38,37 +38,34 @@
     </header>
     <section class="pt-4 bg-light">
         <div class="container">
-            <h1 class="text-center">Contact Us</h1>
+            <h1 class="text-center">Create Account</h1>
             <div class="row">
               <div class="col-md-12 pt-4">  
                 <form>
-                    <div class="form-row">
-                      <div class="form-group col-md-6">
-                        <label for="inputName4">Name</label>
-                        <input type="text" class="form-control" id="inputName4" placeholder="Name" required="true">
+                    <div class="form-group text-center">
+                        <label class="form-label " for="login">Account for:</label>
+                        <label class="radio-inline">
+                        <input type="radio" name="optradio" value="donor" required="true">Donor
+                        </label>
+                        <label class="radio-inline">
+                        <input type="radio" name="optradio"value="organization" required="true">Organization
+                        </label>
                       </div>
-                      <div class="form-group col-md-6">
-                        <label for="inputPlace4">Place</label>
-                        <input type="text" class="form-control" id="inputPlace4" placeholder="Place" required="true">
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="username" placeholder="Username" required="true">
                       </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                          <label for="inputEmail4">Email</label>
-                          <input type="email" class="form-control" id="inputEmail4" placeholder="Email" required="true">
+                      <div class="form-group">
+                        <input type="email" class="form-control" id="email" placeholder="Email" required="true">
+                      </div>
+                        <div class="form-group">
+                          <input type="password" class="form-control" id="pwd1" placeholder="New password" required="true">
                         </div>
-                        <div class="form-group col-md-6">
-                          <label for="inputMobile4">Mobile</label>
-                          <input type="tel" class="form-control" id="inputPlace4" placeholder="Mobile" required="true">
+                        <div class="form-group">
+                          <input type="password" class="form-control" id="pwd2" placeholder="Confirm password" required="true">
                         </div>
-                      </div>
-                    <div class="form-group">
-                      <label for="inputMessage4">Message</label>
-                      <textarea class="form-control" cols="30" rows="10" placeholder="Type your message here..." required="true"></textarea>
-                    </div>
                     <div class="form-group">
                         <div>
-                            <button type="submit" class="btn btn-primary w-100">Submit</button>
+                            <button type="submit" class="btn btn-primary w-100">Create Account</button>
                         </div>
                         <div class="pt-3">
                             <button type="submit" class="btn btn-white w-100">Cancel</button>
